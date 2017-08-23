@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+
+{% block title %}首页{% endblock %}
+
+{% block page_content %}
+<h1>hello,stranger!</h1>
+{% endblock %}
+
+{% block content %}
+<p>the local time and date is {{ moment(current_time).format('LLL')}}.</p>
+<p>that was {{ moment(current_time).fromNow(refresh=False)}}</p>
+{% endblock %}

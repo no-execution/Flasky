@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block page_content %}
+<div class="Page_header">
+    <h1>Dear {{ user.username }},welcome to this world !</h1>
+to confirm your account please click on the following link:
+<a href="{{ url_for('auth.confirm',token=token,_external=True) }}">click here to confirm !</a>
+
+    <div>Sincerely</div>
+
+    <div>MR.Wang</div>
+
+    <div>Note:replies to this email address are not monitored.</div>
+</div>
+{% endblock %}

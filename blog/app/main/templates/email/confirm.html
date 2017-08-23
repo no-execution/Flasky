@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}confirm{% endblock %}
+{% block content %}
+<div class="page_header"> Please Confirm </div>
+<div class="Page_content">
+Dear {{ user.username }}
+welcome to this world !
+
+to confirm your account please click on the following link:
+{{ url_for('auth.confirm'),token=token,_external=True}}
+
+Sincerely
+
+MR.Wang
+
+Note:replies to this email address are not monitored.
+</div>
+{% endblock %}

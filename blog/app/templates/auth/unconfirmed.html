@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}welcome!{% endblock %}
+{% block page_content %}
+<div class="page-header">
+    <h1>
+        Hello,
+{% if current_user.is_authenticated %}
+    {{ current_user.username }}
+{% else %}
+    Stranger
+{% endif %}!
+    </h1>
+</div>
+亲爱的用户您好，您还没有对账户进行验证，请进入邮箱进行验证。
+<a href="{{ url_for('auth.resend_confirmation',_external=True) }}">点击此处重新发送确认邮件</a>
+{% endblock %}

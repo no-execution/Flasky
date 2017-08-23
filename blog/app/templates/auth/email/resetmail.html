@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block page_content %}
+<div class="page-header">点击以下链接进行密码重置</div>
+<p>
+    <a href="{{url_for('auth.reset',token=token,mail=mail,_external=True)}}">点击此链接</a>
+</p>
+{% endblock %}
